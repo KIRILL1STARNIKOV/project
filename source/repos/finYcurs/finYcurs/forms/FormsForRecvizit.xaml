@@ -1,0 +1,97 @@
+﻿<Window x:Class="finYcurs.forms.FormsForRecvizit"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:finYcurs.forms"
+        mc:Ignorable="d"
+        Title="Реквизиты" Height="450" Width="800">
+    <StackPanel Background="AliceBlue">
+        <TabControl Background="Transparent" 
+                    Height="430"
+                    Width="800"
+                    Style="{StaticResource TabControlSecond}" >
+            <TabItem Header="Общие"
+                     FontSize="16"
+                     Style="{StaticResource TabItemStyleSecond}">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="300"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="130"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Column="1">
+                        <Label Content="Наименование компании"
+                               FontSize="16"
+                               HorizontalAlignment="Right"
+                               Margin=" 0 0 50 0"/>
+                        <Label Content="Тип Налогоплательщика"
+                               FontSize="16"
+                               HorizontalAlignment="Left"
+                               Margin=" 0 20 50 0"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="2">
+                        <TextBox Margin="5 5 5 5"/>
+                        <TextBox Margin="5 30 5 5"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="1" >
+                        <Label Content="ИНН"
+                               FontSize="16"
+                               HorizontalAlignment="Center"
+                               Margin=" 0 0 0 0"/>
+                        <TextBox Margin="10"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="1" Grid.Column="1" >
+                        <Label Content="КПП"
+                               FontSize="16"
+                               HorizontalAlignment="Center"
+                               Margin=" 0 0 0 0"/>
+                        <TextBox Margin="10"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="1" Grid.Column="2" >
+                        <Label Content="ОГРН"
+                               FontSize="16"
+                               HorizontalAlignment="Center"
+                               Margin=" 0 0 0 0"/>
+                        <TextBox Margin="10"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="2" Grid.ColumnSpan="3" >
+                        <Label Content="Адрес фактический"
+                               FontSize="16"
+                               HorizontalAlignment="Center"
+                               Margin=" 0 0 0 0"/>
+                        <TextBox Margin="5"/>
+                        <Label Content="Адрес Юридический"
+                               FontSize="16"
+                               HorizontalAlignment="Center"
+                               Margin=" 0 0 0 0"/>
+                        <TextBox Margin="5"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="3">
+                        
+                    </StackPanel>
+                </Grid>
+
+            </TabItem>
+            <TabItem Header="Регистрационные номера"
+                     FontSize="16"
+                     Style="{StaticResource TabItemStyleSecond}"/>
+            <TabItem Header="Коды"
+                     FontSize="16"
+                     Style="{StaticResource TabItemStyleSecond}"/>
+            <TabItem Header="Ответственные лица"
+                     FontSize="16"
+                     Style="{StaticResource TabItemStyleSecond}"/>
+            <TabItem Header="Счета"
+                     FontSize="16"
+                     Style="{StaticResource TabItemStyleSecond}"/>
+        </TabControl>
+
+    </StackPanel>
+</Window>

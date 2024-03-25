@@ -1,0 +1,16 @@
+C:\Users\kirill\source\repos\practika1q\practika1q\bin\Debug\practika1q.exe.config
+C:\Users\kirill\source\repos\practika1q\practika1q\bin\Debug\practika1q.exe
+C:\Users\kirill\source\repos\practika1q\practika1q\bin\Debug\practika1q.pdb
+C:\Users\kirill\source\repos\practika1q\practika1q\obj\Debug\practika1q.csproj.AssemblyReference.cache
+C:\Users\kirill\source\repos\practika1q\practika1q\obj\Debug\practika1q.csproj.SuggestedBindingRedirects.cache
+C:\Users\kirill\source\repos\practika1q\practika1q\obj\Debug\MainWindow.g.cs
+C:\Users\kirill\source\repos\practika1q\practika1q\obj\Debug\App.g.cs
+C:\Users\kirill\source\repos\practika1q\practika1q\obj\Debug\practika1q_MarkupCompile.cache
+C:\Users\kirill\source\repos\practika1q\practika1q\obj\Debug\practika1q_MarkupCompile.lref
+C:\Users\kirill\source\repos\practika1q\practika1q\obj\Debug\MainWindow.baml
+C:\Users\kirill\source\repos\practika1q\practika1q\obj\Debug\practika1q.g.resources
+C:\Users\kirill\source\repos\practika1q\practika1q\obj\Debug\practika1q.Properties.Resources.resources
+C:\Users\kirill\source\repos\practika1q\practika1q\obj\Debug\practika1q.csproj.GenerateResource.cache
+C:\Users\kirill\source\repos\practika1q\practika1q\obj\Debug\practika1q.csproj.CoreCompileInputs.cache
+C:\Users\kirill\source\repos\practika1q\practika1q\obj\Debug\practika1q.exe
+C:\Users\kirill\source\repos\practika1q\practika1q\obj\Debug\practika1q.pdb

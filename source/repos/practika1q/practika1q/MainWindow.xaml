@@ -1,0 +1,18 @@
+﻿<Window x:Class="practika1q.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:practika1q"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBox x:Name="tb1" HorizontalAlignment="Left" Height="23" Margin="146,98,0,0" TextWrapping="Wrap" Text="note1" VerticalAlignment="Top" Width="149" TextChanged="TextBox_TextChanged"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="39" Margin="146,330,0,0" VerticalAlignment="Top" Width="158" Click="Button_Click"/>
+        <TextBox x:Name="tb2" HorizontalAlignment="Left" Height="109" Margin="146,146,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="154" TextChanged="TextBox_TextChanged_1"/>
+        <RadioButton Content="txt" x:Name="rd1" HorizontalAlignment="Left" Margin="188,280,0,0" VerticalAlignment="Top" Checked="rd1_Checked"/>
+        <RadioButton Content="doc" x:Name="rd2"  HorizontalAlignment="Left" Margin="188,300,0,0" VerticalAlignment="Top" Checked="rd2_Checked"/>
+        <Label x:Name="labsub" Content="Label" HorizontalAlignment="Left" Margin="320,332,0,0" VerticalAlignment="Top" Width="470"/>
+
+    </Grid>
+</Window>

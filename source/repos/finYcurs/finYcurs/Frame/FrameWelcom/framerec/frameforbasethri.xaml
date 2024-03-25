@@ -1,0 +1,165 @@
+﻿<Page x:Class="finYcurs.Frame.FrameWelcom.framerec.frameforbasethri"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:finYcurs.Frame.FrameWelcom.framerec"
+      xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="frameforbasethri">
+
+    <Grid Background="AliceBlue">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="370"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.ColumnSpan="4">
+            <TextBlock FontSize="16" 
+                       HorizontalAlignment="Center"
+                       FontWeight="Bold">Свиделтельство о постановке на учет</TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Column="2">
+            <TextBlock Margin="0 45 0 0"
+                       FontSize="16"
+                       HorizontalAlignment="Center">Дата выдачи</TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Column="3">
+            <TextBox Margin="0 45 5 0"
+                     x:Name="tbdateIFNS"/>
+        </StackPanel>
+        <StackPanel Grid.ColumnSpan="2">
+            <TextBlock FontSize="16" 
+                       HorizontalAlignment="Center"
+                       Margin="0 170 0 0">Наименование ИФНС</TextBlock>
+            <TextBox Margin="15"
+                     FontSize="16"
+                     x:Name="tbfornameIFNS"
+                     />
+            <TextBlock FontSize="16" 
+                       HorizontalAlignment="Center"
+                       Margin="0 0 0 0">Код абонента</TextBlock>
+            <TextBox Margin="15"
+                     FontSize="16"
+                     x:Name="tbforCodeABO"
+                     />
+        </StackPanel>
+        <StackPanel Grid.Column="2" Grid.ColumnSpan="2">
+            <TextBlock FontSize="16" 
+                       HorizontalAlignment="Center"
+                       Margin="0 80 0 0">Регистрационный номер ПФ</TextBlock>
+
+            <xctk:MaskedTextBox
+                     Width="300"
+                     Margin="5"
+                     Height="20"
+                     x:Name="tbforregmunPF"
+                     FontSize="16"
+                     Mask="000000000000"
+                     PromptChar=""
+                     LostFocus="MaskedTBPF_LostFocus">
+            </xctk:MaskedTextBox>
+            <TextBlock FontSize="16" 
+                       HorizontalAlignment="Center"
+                       Margin="0 0 0 0">Регистрационный номер ФСС</TextBlock>
+
+            <xctk:MaskedTextBox
+                     Width="300"
+                     Margin="5"
+                     Height="20"
+                     x:Name="tbforregmunFSS"
+                     FontSize="16"
+                     Mask="000000000000"
+                     PromptChar=""
+                     LostFocus="MaskedTBFSS_LostFocus">
+            </xctk:MaskedTextBox>
+        </StackPanel>
+        <StackPanel Grid.Column="2">
+            <TextBlock FontSize="16" 
+                       
+                       HorizontalAlignment="Center"
+                       Margin="80 190 0 0">ОКАТО</TextBlock>
+            <TextBlock FontSize="16" 
+                       HorizontalAlignment="Center"
+                       Margin="80 20 0 0">ОКТМО</TextBlock>
+            <TextBlock FontSize="16" 
+                       HorizontalAlignment="Center"
+                       Margin="80 20 0 0">ОКПО</TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Column="3">
+            <xctk:MaskedTextBox
+                     Margin="0 190 10 0"
+                     Height="20"
+                     x:Name="tbforOKATO"
+                     FontSize="16"
+                     Mask="00000000"
+                     PromptChar=""
+                     LostFocus="MaskedTBOKATO_LostFocus">
+            </xctk:MaskedTextBox>
+            <xctk:MaskedTextBox
+                     Margin="0 20 10 0"
+                     Height="20"
+                     x:Name="tbforOKTMO"
+                     FontSize="16"
+                     Mask="000000000"
+                     PromptChar=""
+                     LostFocus="MaskedTBOKTMO_LostFocus">
+            </xctk:MaskedTextBox>
+            <xctk:MaskedTextBox
+                     Margin="0 20 10 0"
+                     Height="20"
+                     x:Name="tbforOKAPO"
+                     FontSize="16"
+                     Mask="00000000"
+                     PromptChar=""
+                     LostFocus="MaskedTBrOKAPO_LostFocus">
+            </xctk:MaskedTextBox>
+        </StackPanel>
+        <StackPanel>
+            <TextBlock Margin="0 45 0 0" FontSize="16" HorizontalAlignment="Center" >Серия и номер</TextBlock>
+            <TextBlock Margin="0 45 0 0" FontSize="16" HorizontalAlignment="Center" >Код ИФНС,</TextBlock>
+            <TextBlock Margin="0 0 0 0" FontSize="16" HorizontalAlignment="Center" >Выдавшей свидетельство</TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+            <TextBox Margin="0 45 0 0" 
+                     FontSize="16"
+                     x:Name="tbtaxnum"/>
+            <TextBox Margin="0 55 0 0" 
+                     FontSize="16"
+                     x:Name="tbcodeIFNS"/>
+            
+        </StackPanel>
+        <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1">
+            <Button 
+                Height="30" 
+                Width="100"
+                Margin="0 20 0 0"
+                Content="Назад"
+                FontSize="16"
+                FontWeight="Bold"
+                Click="butretframe"
+                
+                Style="{StaticResource Buttonstyle}" 
+                />
+        </StackPanel>
+        <StackPanel Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="1">
+            <Button 
+                Height="30" 
+                Width="100"
+                Margin="0 20 0 0"
+                Content="Дальше"
+                FontSize="16"
+                FontWeight="Bold"
+                Click="butnextframe"
+                
+                Style="{StaticResource Buttonstyle}" 
+                />
+        </StackPanel>
+    </Grid>
+</Page>

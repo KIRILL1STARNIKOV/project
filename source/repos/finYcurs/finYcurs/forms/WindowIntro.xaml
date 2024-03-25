@@ -1,0 +1,19 @@
+﻿<Window x:Class="finYcurs.forms.WindowIntro"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:finYcurs.forms"
+        mc:Ignorable="d"
+        Title="WindowIntro" Height="480" Width="800"
+        WindowStyle="None"
+        ResizeMode="NoResize">
+    <Grid>
+        <StackPanel x:Name="changeDB" Width="800" Background="#ADD8E6" HorizontalAlignment="Left">
+
+            <Frame Height="460" Margin="10" x:Name="FrameChangedWelcom"
+                   NavigationUIVisibility="Hidden"/>
+
+        </StackPanel>
+    </Grid>
+</Window>

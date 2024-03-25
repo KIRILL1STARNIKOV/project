@@ -1,0 +1,174 @@
+﻿<Window x:Class="finYcurs.MainWin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:finYcurs"
+        mc:Ignorable="d"
+        Title="БугУ" Height="880" Width="1440"
+        AllowsTransparency="False"
+        WindowState="Maximized">
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Border Background="#ADD8E6" Height="30" VerticalAlignment="Top" Grid.ColumnSpan="2">
+
+            <Grid x:Name="MainGrid">
+                <StackPanel Orientation="Horizontal">
+
+                    <Button FontSize="16"
+                            Content="Операции"  
+                            Style="{StaticResource CustomButtonStyle}" >
+                        <Button.ContextMenu>
+                            <ContextMenu  >
+                                <MenuItem Header="Журнал" x:Name="JurnalBut" Click="clickcreate"/>
+                                <MenuItem Header="Движение ценностей и услуг" x:Name="MoveMoneyBut" Click="clickcreate"/>
+                                <MenuItem Header="Счета" x:Name="AccoutBut" Click="clickcreate"/>
+                                <MenuItem Header="Касса" x:Name="CashboxBut" Click="clickcreate"/>
+                            </ContextMenu>
+                        </Button.ContextMenu>
+                    </Button>
+                    <Button FontSize="16"
+                            Content="Правка" 
+                            Style="{StaticResource CustomButtonStyle}" 
+                            MouseUp="Button_MouseUp">
+                        <Button.ContextMenu>
+                            <ContextMenu>
+                                <MenuItem Header="Копировать"  x:Name="copybut" Click="CopyButton_Click" />
+                                <MenuItem Header="Вставить"  x:Name="insertbut" Click="PasteButton_Click" />
+                                <MenuItem Header="Вырезать"  x:Name="cutbut" Click="CutButton_Click" />
+                            </ContextMenu>
+                        </Button.ContextMenu>
+                    </Button>
+
+                    <Button FontSize="16"
+                            Content="Зарплата" 
+                            Style="{StaticResource CustomButtonStyle}" 
+                            MouseUp="Button_MouseUp">
+                        <Button.ContextMenu>
+                            <ContextMenu>
+                                <MenuItem Header="Сотрудники"
+                                          x:Name="EmproyeesBut"
+                                          Click="clickcreate"/>
+                                <MenuItem Header="Начислить зарплату"
+                                          x:Name="CalculationSalaryBut"
+                                          Click="clickcreate"/>
+                                <MenuItem Header="Выдать зарплату" 
+                                          x:Name="IssueSalaryBut"
+                                          Click="clickcreate"/>
+                            </ContextMenu>
+                        </Button.ContextMenu>
+                    </Button>
+                    <Button FontSize="16"
+                            Content="ОС и НМА" 
+                            Style="{StaticResource CustomButtonStyle}" 
+                            MouseUp="Button_MouseUp">
+                        <Button.ContextMenu>
+                            <ContextMenu>
+                                <MenuItem Header="ОС и НМА" x:Name="OSandNMABut" Click="clickcreate" />
+                                <MenuItem Header="Транспортные средства" x:Name="CarsBut" Click="clickcreate"/>
+                                <MenuItem Header="Земельные участки" x:Name="GroundBut" Click="clickcreate"/>
+                            </ContextMenu>
+                        </Button.ContextMenu>
+                    </Button>
+
+                    <Button FontSize="16"
+                            Content="Отчеты" 
+                            Style="{StaticResource CustomButtonStyle}" 
+                            MouseUp="Button_MouseUp">
+                        <Button.ContextMenu>
+                            <ContextMenu>
+                                <MenuItem Header="Отчет 1"/>
+                                <MenuItem Header="Отчет 2"/>
+                                <MenuItem Header="Отчет 3"/>
+                            </ContextMenu>
+                        </Button.ContextMenu>
+                    </Button>
+
+                    <Button FontSize="16"
+                            Content="Справка" 
+                            Style="{StaticResource CustomButtonStyle}" 
+                            MouseUp="Button_MouseUp">
+                        <Button.ContextMenu>
+                            <ContextMenu>
+                                <MenuItem Header="Реквизиты"
+                                          x:Name="recvizit"
+                                          Click="clickcreate"/>
+                                <MenuItem Header="Справка 2"/>
+                                <MenuItem Header="Справка 3"/>
+                            </ContextMenu>
+                        </Button.ContextMenu>
+                    </Button>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <Border Background="AliceBlue" 
+                Margin="0,30,0,0" 
+                Grid.ColumnSpan="2" 
+                VerticalAlignment="Top" 
+                Height="55" >
+            <StackPanel Orientation="Horizontal" 
+                        Margin="0,0,0,5">
+                <!-- Кнопка "Фильт" -->
+                <Button FontSize="16"
+                        Content="Фильтр" 
+                        Style="{StaticResource CustomButtonStyle}" 
+                        Command="{Binding FilterCommand}"/>
+
+                <!-- Кнопка "Навигация периода" (Текстбокс с выбором месяца и года) -->
+                <ComboBox Name="monthComboBox"
+                          Width="200"  
+                          Margin="10,0,0,0" 
+                          SelectedIndex="{Binding SelectedMonthIndex}" 
+                          ItemsSource="{Binding Months}">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding}"/>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+                <!-- Кнопка "Сортировка по возрастанию" -->
+                <Button FontSize="16"
+                        Content="Сортировка ▲" 
+                        Style="{StaticResource CustomButtonStyle}" 
+                        Command="{Binding SortAscendingCommand}"/>
+
+                <!-- Кнопка "Сортировка по убыванию" -->
+                <Button FontSize="16"
+                        Content="Сортировка ▼" 
+                        Style="{StaticResource CustomButtonStyle}" 
+                        Command="{Binding SortDescendingCommand}"/>
+                <Button FontSize="16"
+                        Content="Закрыть все вкладки"
+                        Click="ButCloseTab_Click"
+                        Style="{StaticResource CustomButtonStyle}" 
+                       />
+            </StackPanel>
+        </Border>
+        <Grid Background="AliceBlue" 
+              x:Name="MainGrid1" 
+              Grid.ColumnSpan="2" 
+              Margin="0,90,0,0">
+            <TabControl Style="{StaticResource TabControlStyle}" 
+                        Margin="0,10,0,27" 
+                        x:Name="MainTab" 
+                        Visibility="Hidden"
+                        HorizontalAlignment="Stretch" 
+                        VerticalAlignment="Stretch"
+                        SelectionChanged="TB_ChangedFrame"
+                        BorderBrush="Transparent">
+            </TabControl>
+            <Frame x:Name="MainFrame" 
+                   Style="{StaticResource FrameStyle}"
+                   HorizontalAlignment="Stretch" 
+                   VerticalAlignment="Stretch"
+                   Margin ="0 30 0 0"
+                   />
+
+        </Grid>
+        <TextBox x:Name="tbforcopy" Visibility="Hidden" Width="0" Height="0" />
+    </Grid>
+</Window>

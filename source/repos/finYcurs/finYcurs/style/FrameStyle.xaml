@@ -1,0 +1,7 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+   <!--Данный стиль нужен для удаления верхней полки у Фреймов-->
+    <Style x:Key="FrameStyle" TargetType="Frame">
+        <Setter Property="NavigationUIVisibility" Value="Hidden"/>
+    </Style>
+</ResourceDictionary>
